@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api
+spec:
+  template:
+    spec:
+      containers:
+        - name: api
+          image: demo:latest
+          env:
+            - name: CERT_FILE
+              value: /app/certs/api.pem
+            - name: PQC_PHASE
+              value: post-quantum migration review
